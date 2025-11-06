@@ -1,0 +1,61 @@
+{
+  "archive_ts": null,
+  "archived": false,
+  "classification": "TLP:CLEAR",
+  "error_count": 0,
+  "errors": [],
+  "expiry_ts": "2025-04-19T00:01:09.069043Z",
+  "file_count": 1,
+  "files": [
+    {
+      "name": "sample_found.json",
+      "sha256": "a8aeb05d6e5cf80fe33d071bf4b8bfb316d4b61e5ae0a95abc62716f0d8cf875",
+      "size": 1115
+    }
+  ],
+  "from_archive": false,
+  "max_score": 0,
+  "metadata": { "from_azul_source": "testing" },
+  "params": {
+    "auto_archive": false,
+    "classification": "TLP:CLEAR",
+    "deep_scan": false,
+    "delete_after_archive": false,
+    "description": "Inspection of file: sample_found.json",
+    "generate_alert": false,
+    "groups": [],
+    "ignore_cache": false,
+    "ignore_dynamic_recursion_prevention": false,
+    "ignore_filtering": false,
+    "ignore_recursion_prevention": false,
+    "ignore_size": false,
+    "initial_data": null,
+    "malicious": false,
+    "max_extracted": 500,
+    "max_supplementary": 500,
+    "never_drop": false,
+    "priority": 1000,
+    "profile": false,
+    "psid": null,
+    "quota_item": true,
+    "service_spec": {},
+    "services": {
+      "excluded": [],
+      "rescan": [],
+      "resubmit": [],
+      "runtime_excluded": [],
+      "selected": ["Static Analysis", "Extraction"]
+    },
+    "submitter": "auser",
+    "ttl": 30,
+    "type": "USER",
+    "use_archive_alternate_dtl": false
+  },
+  "results": [],
+  "scan_key": null,
+  "sid": "5B5LXB7csRBGdJCxyXg0u0",
+  "state": "submitted",
+  "times": { "completed": null, "submitted": "2025-03-20T00:01:09.178150Z" },
+  "to_be_deleted": false,
+  "verdict": { "malicious": [], "non_malicious": [] }
+}

@@ -1,0 +1,62 @@
+{
+  "is_cache": true,
+  "score": "100",
+  "submission": {
+    "sid": "7DVmTJOBtPQGefNrmayWRm",
+    "time": "2025-05-08T23:11:33.182538Z",
+    "files": [
+      {
+        "name": "tmpt1vh44ht",
+        "size": 896,
+        "sha256": "0011ae7c32f1aa6bb4e089c771a62975e3e523502a56a7698e802debffd42c90"
+      }
+    ],
+    "metadata": {
+      "from_azul_source": "samples",
+      "sha256": "0011ae7c32f1aa6bb4e089c771a62975e3e523502a56a7698e802debffd42c90",
+      "ingest_id": "2ty5mZrB5GSJWstK3pMXH7",
+      "type": "INGEST",
+      "ts": "2025-05-08T23:11:33.182417Z"
+    },
+    "notification": {
+      "queue": null,
+      "threshold": null
+    },
+    "params": {
+      "classification": "OFFICIAL",
+      "deep_scan": false,
+      "description": "[INGEST] Inspection of file: tmpt1vh44ht",
+      "generate_alert": false,
+      "groups": [],
+      "ignore_cache": false,
+      "ignore_recursion_prevention": false,
+      "ignore_dynamic_recursion_prevention": false,
+      "ignore_filtering": false,
+      "ignore_size": false,
+      "never_drop": false,
+      "malicious": false,
+      "max_extracted": 1000,
+      "max_supplementary": 1000,
+      "priority": 250,
+      "profile": false,
+      "psid": null,
+      "quota_item": false,
+      "services": {
+        "selected": ["Static Analysis", "Extraction"],
+        "excluded": [],
+        "rescan": [],
+        "resubmit": [],
+        "runtime_excluded": []
+      },
+      "service_spec": {},
+      "submitter": "auser",
+      "ttl": 30,
+      "type": "INGEST",
+      "initial_data": null,
+      "auto_archive": false,
+      "delete_after_archive": false,
+      "use_archive_alternate_dtl": false
+    },
+    "scan_key": "0fb7ef31d043494cc1cf91e8e9728bdav0"
+  }
+}

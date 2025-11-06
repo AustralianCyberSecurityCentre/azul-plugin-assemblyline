@@ -1,0 +1,42 @@
+{
+  "al": {
+    "error": null,
+    "items": [
+      {
+        "classification": "OFFICIAL",
+        "confirmed": false,
+        "data": {
+          "classification": "OFFICIAL",
+          "md5": "69b6a826d562910d9067e6f9f6ce8ce4",
+          "score": 0,
+          "score_map": { "Codevector": 0, "Extract": 0 },
+          "seen": { "count": 1, "last": "2025-03-19T22:03:14.613709Z" },
+          "sha1": "24c6ce381dc220a82249e7c16fe99ebaec9ef559",
+          "sha256": "4ac45a1f00157c5db81f6f04b37d6348b15f5c9ffdf21542076ee329e1c59a97",
+          "size": 8851575,
+          "type": "document/installer/windows"
+        },
+        "description": "File found in AL with score of 0.",
+        "malicious": false
+      }
+    ]
+  },
+  "alert": {
+    "error": null,
+    "items": [
+      {
+        "confirmed": false,
+        "data": [
+          {
+            "classification": "OFFICIAL",
+            "date": "2025-03-19T22:03:30.180226Z",
+            "id": "2DfS3G2y7pYWQKqeSCCgnx",
+            "score": 350
+          }
+        ],
+        "description": "Alerted on 1 times",
+        "malicious": false
+      }
+    ]
+  }
+}

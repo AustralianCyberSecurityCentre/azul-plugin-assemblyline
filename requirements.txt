@@ -1,0 +1,12 @@
+assemblyline_client
+azul-runner>=4.0.0
+fastapi
+packaging
+pendulum
+pydantic>2
+pydantic-settings>2
+structlog
+uvicorn
+azul-security
+prometheus_client
+starlette_exporter

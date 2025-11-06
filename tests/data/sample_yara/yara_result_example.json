@@ -1,0 +1,399 @@
+{
+  "version": 1,
+  "action": {
+    "is_cache": false,
+    "score": 1000,
+    "submission": {
+      "archive_ts": null,
+      "classification": "OFFICIAL",
+      "error_count": 0,
+      "errors": [],
+      "expiry_ts": "2025-07-11T06:28:37.753633Z",
+      "file_count": 1,
+      "files": [
+        {
+          "name": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+          "size": 287232,
+          "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f"
+        }
+      ],
+      "max_score": 1000,
+      "metadata": {},
+      "params": {
+        "classification": "OFFICIAL",
+        "deep_scan": false,
+        "description": "Resubmit 717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f for analysis",
+        "generate_alert": false,
+        "groups": [],
+        "ignore_cache": false,
+        "ignore_recursion_prevention": false,
+        "ignore_dynamic_recursion_prevention": false,
+        "ignore_filtering": false,
+        "ignore_size": false,
+        "never_drop": false,
+        "malicious": false,
+        "max_extracted": 500,
+        "max_supplementary": 500,
+        "priority": 1000,
+        "profile": false,
+        "psid": null,
+        "quota_item": true,
+        "services": {
+          "selected": ["Static Analysis", "Extraction"],
+          "excluded": [],
+          "rescan": [],
+          "resubmit": [],
+          "runtime_excluded": []
+        },
+        "service_spec": {},
+        "submitter": "auser",
+        "ttl": 30,
+        "type": "USER",
+        "initial_data": null,
+        "auto_archive": false,
+        "delete_after_archive": false,
+        "use_archive_alternate_dtl": false
+      },
+      "results": [
+        "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.Extract.v4_5_0_67.c6iOybUKsLIg.e",
+        "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.ConfigExtractor.v4_5_0_41.c2XCV59VULaG.e",
+        "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.YARA.v4_5_0_37.cCsEpMjEPQxf"
+      ],
+      "sid": "1niwnot3Pz8TWzUExGfvlS",
+      "state": "completed",
+      "times": {
+        "completed": "2025-06-11T06:28:46.176507Z",
+        "submitted": "2025-06-11T06:28:46.104702Z"
+      },
+      "verdict": { "malicious": [], "non_malicious": [] },
+      "scan_key": null,
+      "archived": false,
+      "to_be_deleted": false,
+      "from_archive": false
+    }
+  },
+  "ontologies": [
+    {
+      "odm_type": "Assemblyline Result Ontology",
+      "odm_version": "1.10",
+      "classification": "OFFICIAL",
+      "file": {
+        "md5": "6f5e21db36c58892d50834f647e8a8d7",
+        "sha1": "0a4ed360e4e0626138d3a53032d23f705707b421",
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "type": "executable/windows/dos",
+        "size": 287232,
+        "names": [
+          "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f"
+        ],
+        "parent": null,
+        "pe": null
+      },
+      "service": {
+        "name": "YARA",
+        "version": "4.5.0.37",
+        "tool_version": "4.3.0.r45313d4"
+      },
+      "submission": {
+        "date": "2025-06-11T06:28:46.104702Z",
+        "metadata": {},
+        "sid": "1niwnot3Pz8TWzUExGfvlS",
+        "source_system": "assemblyline",
+        "original_source": null,
+        "classification": "OFFICIAL",
+        "submitter": "auser",
+        "retention_id": null,
+        "max_score": 1000,
+        "groups": []
+      },
+      "results": {
+        "antivirus": [],
+        "http": [],
+        "malwareconfig": [],
+        "netflow": [],
+        "process": [],
+        "sandbox": [],
+        "signature": [
+          {
+            "objectid": {
+              "tag": "YARA.bartblaze.EnigmaStub",
+              "ontology_id": "signature_1ktz0FVDuK0dCVhNyDzJMj",
+              "service_name": "YARA"
+            },
+            "name": "bartblaze.EnigmaStub",
+            "type": "YARA",
+            "classification": "TLP:CLEAR",
+            "attributes": [
+              {
+                "source": {
+                  "tag": "bartblaze.EnigmaStub",
+                  "ontology_id": "signature_1ktz0FVDuK0dCVhNyDzJMj",
+                  "service_name": "Yara"
+                },
+                "file_hash": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f"
+              }
+            ],
+            "signature_id": "nqfVjSZe90wUTGsVBo1SU"
+          }
+        ],
+        "tags": { "file.rule.yara": ["bartblaze.EnigmaStub"] },
+        "heuristics": [
+          {
+            "heur_id": "YARA_5",
+            "score": 1000,
+            "times_raised": 1,
+            "name": "Malware",
+            "tags": { "file.rule.yara": ["bartblaze.EnigmaStub"] }
+          }
+        ],
+        "score": 1000
+      }
+    }
+  ],
+  "full": {
+    "classification": "OFFICIAL",
+    "error_count": 0,
+    "errors": {},
+    "file_count": 1,
+    "files": [
+      {
+        "name": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "size": 287232
+      }
+    ],
+    "file_infos": {
+      "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f": {
+        "archive_ts": null,
+        "ascii": "MZ......................@.......................................",
+        "classification": "TLP:CLEAR",
+        "entropy": 3.802968351740322,
+        "expiry_ts": "2025-07-11T06:28:46.136746Z",
+        "hex": "4d5a90000300000004000000ffff0000b80000000000000040000000000000000000000000000000000000000000000000000000000000000000000080000000",
+        "magic": "MS-DOS executable",
+        "md5": "6f5e21db36c58892d50834f647e8a8d7",
+        "mime": "application/octet-stream",
+        "sha1": "0a4ed360e4e0626138d3a53032d23f705707b421",
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "size": 287232,
+        "ssdeep": "3072:fo5jrCjpKKb6LbG+u+9EHn6AiNkKFKKb6LbG+u+9:s4UTu+967KgTu+9",
+        "type": "executable/windows/dos",
+        "comments": [],
+        "from_archive": false,
+        "is_section_image": false,
+        "is_supplementary": false,
+        "label_categories": { "attribution": [], "info": [], "technique": [] },
+        "labels": [],
+        "seen": {
+          "count": 5,
+          "first": "2025-05-28T04:02:29.796105Z",
+          "last": "2025-06-11T06:28:46.142881Z"
+        },
+        "tlsh": "T19954D7283BE6501AF1B7AFBA59E0AC54D67B75423526E30B2346130E0CD268CDE547FE",
+        "uri_info": null
+      }
+    },
+    "file_tree": {
+      "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f": {
+        "children": {},
+        "name": [
+          "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f"
+        ],
+        "score": 1000,
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "size": 287232,
+        "truncated": false,
+        "type": "executable/windows/dos"
+      }
+    },
+    "missing_error_keys": [],
+    "missing_result_keys": [],
+    "results": {
+      "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.ConfigExtractor.v4_5_0_41.c2XCV59VULaG.e": {
+        "response": {
+          "extracted": [],
+          "service_name": "ConfigExtractor",
+          "service_version": "4_5_0_41",
+          "milestones": {
+            "service_completed": "2025-06-11T06:28:46.268777Z",
+            "service_started": "2025-06-11T06:28:46.268760Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_tool_version": null,
+          "supplementary": []
+        },
+        "classification": "TLP:CLEAR",
+        "result": { "score": 0, "sections": [] },
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "size": null,
+        "type": null,
+        "archive_ts": null,
+        "created": "2025-06-11T06:28:46.268713Z",
+        "drop_file": false,
+        "expiry_ts": "2025-06-16T06:28:46.268697Z",
+        "from_archive": false,
+        "partial": false
+      },
+      "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.Extract.v4_5_0_67.c6iOybUKsLIg.e": {
+        "response": {
+          "extracted": [],
+          "service_name": "Extract",
+          "service_version": "4_5_0_67",
+          "milestones": {
+            "service_completed": "2025-06-11T06:28:46.268586Z",
+            "service_started": "2025-06-11T06:28:46.268566Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_tool_version": null,
+          "supplementary": []
+        },
+        "classification": "TLP:CLEAR",
+        "result": { "score": 0, "sections": [] },
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "size": null,
+        "type": null,
+        "archive_ts": null,
+        "created": "2025-06-11T06:28:46.268496Z",
+        "drop_file": false,
+        "expiry_ts": "2025-06-16T06:28:46.268463Z",
+        "from_archive": false,
+        "partial": false
+      },
+      "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.YARA.v4_5_0_37.cCsEpMjEPQxf": {
+        "response": {
+          "extracted": [],
+          "service_name": "YARA",
+          "service_version": "4.5.0.37",
+          "milestones": {
+            "service_completed": "2025-06-11T06:28:38.273821Z",
+            "service_started": "2025-06-11T06:28:37.935602Z"
+          },
+          "service_context": "yara version: 4.3.0",
+          "service_debug_info": null,
+          "service_tool_version": "4.3.0.r45313d4",
+          "supplementary": [
+            {
+              "allow_dynamic_recursion": false,
+              "classification": "OFFICIAL",
+              "description": "Result Ontology from YARA",
+              "is_section_image": false,
+              "name": "yara_717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f.ontology",
+              "parent_relation": "INFORMATION",
+              "sha256": "b9d3e0465cc14efdc2417cb51bdda975501f352142dae0563e2ff13eb1db2e41"
+            }
+          ]
+        },
+        "classification": "TLP:CLEAR",
+        "result": {
+          "score": 1000,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": {
+                "author": "@bartblaze",
+                "category": "MALWARE",
+                "description": "Identifies Enigma packer stub.",
+                "id": "nqfVjSZe90wUTGsVBo1SU",
+                "name": "EnigmaStub",
+                "source": "BARTBLAZE",
+                "string_hits": [
+                  ": ''EnigmaProtector' [@ 0x28a3b, 0x28a51, 0x28a78, 0x28a99, 0x28ab0...] (20x)'"
+                ],
+                "version": "1.0"
+              },
+              "body_config": {},
+              "body_format": "KEY_VALUE",
+              "classification": "TLP:CLEAR",
+              "depth": 0,
+              "heuristic": {
+                "attack": [],
+                "heur_id": "YARA.5",
+                "name": "Malware",
+                "score": 1000,
+                "signature": [
+                  {
+                    "frequency": 1,
+                    "name": "bartblaze.EnigmaStub",
+                    "safe": false
+                  }
+                ]
+              },
+              "promote_to": null,
+              "tags": [
+                {
+                  "safelisted": false,
+                  "short_type": "yara",
+                  "type": "file.rule.yara",
+                  "value": "bartblaze.EnigmaStub"
+                }
+              ],
+              "title_text": "[bartblaze] EnigmaStub"
+            }
+          ]
+        },
+        "sha256": "717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f",
+        "size": 287232,
+        "type": "executable/windows/dos",
+        "archive_ts": null,
+        "created": "2025-06-11T06:28:39.013115Z",
+        "drop_file": false,
+        "expiry_ts": "2025-07-11T06:28:46.136746Z",
+        "from_archive": false,
+        "partial": false
+      }
+    },
+    "state": "completed",
+    "times": {
+      "completed": "2025-06-11T06:28:46.176507Z",
+      "submitted": "2025-06-11T06:28:46.104702Z"
+    },
+    "params": {
+      "classification": "OFFICIAL",
+      "deep_scan": false,
+      "description": "Resubmit 717b6d2d0e4f17cccd8fd0f3c05efc6d2e7c7a30dd323eb676622d67d06bc14f for analysis",
+      "groups": [],
+      "submitter": "auser",
+      "ttl": 30,
+      "type": "USER",
+      "auto_archive": false,
+      "delete_after_archive": false,
+      "generate_alert": false,
+      "ignore_cache": false,
+      "ignore_dynamic_recursion_prevention": false,
+      "ignore_filtering": false,
+      "ignore_recursion_prevention": false,
+      "ignore_size": false,
+      "initial_data": null,
+      "malicious": false,
+      "max_extracted": 500,
+      "max_supplementary": 500,
+      "never_drop": false,
+      "priority": 1000,
+      "profile": false,
+      "psid": null,
+      "quota_item": true,
+      "service_spec": {},
+      "services": {
+        "excluded": [],
+        "rescan": [],
+        "resubmit": [],
+        "runtime_excluded": [],
+        "selected": ["Static Analysis", "Extraction"]
+      },
+      "use_archive_alternate_dtl": false
+    },
+    "archive_ts": null,
+    "archived": false,
+    "expiry_ts": "2025-07-11T06:28:37.753633Z",
+    "from_archive": false,
+    "max_score": 1000,
+    "metadata": {},
+    "missing_file_keys": [],
+    "scan_key": null,
+    "sid": "1niwnot3Pz8TWzUExGfvlS",
+    "to_be_deleted": false,
+    "verdict": { "malicious": [], "non_malicious": [] }
+  }
+}

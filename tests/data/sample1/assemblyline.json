@@ -1,0 +1,1211 @@
+{
+  "version": 1,
+  "action": {
+    "is_cache": false,
+    "score": 0,
+    "submission": {
+      "archive_ts": "2022-08-17T17:51:08.494820Z",
+      "classification": "TLP:WHITE",
+      "error_count": 0,
+      "errors": [],
+      "expiry_ts": "2022-09-01T14:53:20.589624Z",
+      "file_count": 5,
+      "files": [
+        {
+          "name": "tester.zip",
+          "size": 1372,
+          "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7"
+        }
+      ],
+      "max_score": 0,
+      "metadata": {},
+      "params": {
+        "classification": "TLP:WHITE",
+        "deep_scan": false,
+        "description": "Resubmit tester.zip for analysis",
+        "generate_alert": false,
+        "groups": ["USERS"],
+        "ignore_cache": false,
+        "ignore_dynamic_recursion_prevention": false,
+        "ignore_filtering": false,
+        "ignore_size": false,
+        "never_drop": false,
+        "malicious": false,
+        "max_extracted": 500,
+        "max_supplementary": 500,
+        "priority": 1000,
+        "profile": false,
+        "psid": null,
+        "quota_item": true,
+        "services": {
+          "selected": [
+            "Static Analysis",
+            "Networking",
+            "Extraction",
+            "Filtering"
+          ],
+          "excluded": [],
+          "rescan": [],
+          "resubmit": [],
+          "runtime_excluded": []
+        },
+        "service_spec": {},
+        "submitter": "auser",
+        "ttl": 30,
+        "type": "USER",
+        "initial_data": null
+      },
+      "results": [],
+      "sid": "RC0jnu0CXGPUrPBSxA40U",
+      "state": "completed",
+      "times": {
+        "completed": "2022-08-02T17:51:09.720883Z",
+        "submitted": "2022-08-02T17:51:08.494955Z"
+      },
+      "verdict": {
+        "malicious": [],
+        "non_malicious": []
+      },
+      "scan_key": null
+    }
+  },
+  "ontologies": [
+    {
+      "odm_type": "Assemblyline Result Ontology",
+      "odm_version": "1.0",
+      "classification": "TLP:WHITE",
+      "file": {
+        "md5": "ca4b1ffdfb54daac6545ed6245c34544",
+        "sha1": "29ad5082d073ba5dacf4ee3372746b5e1e0223b6",
+        "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7",
+        "type": "archive/zip",
+        "size": 1372,
+        "names": ["tester.zip"]
+      },
+      "service": {
+        "name": "Extract",
+        "version": "4.2.0.dev79",
+        "tool_version": null
+      },
+      "results": {
+        "tags": {
+          "file.name.extracted": [
+            "tester/nested.zip",
+            "tester/metronome.zip",
+            "tester/file1.txt",
+            "tester/things/orbit.txt"
+          ]
+        },
+        "heuristics": [
+          {
+            "tags": {
+              "file.name.extracted": [
+                "tester/nested.zip",
+                "tester/metronome.zip",
+                "tester/file1.txt",
+                "tester/things/orbit.txt"
+              ]
+            },
+            "times_raised": 1,
+            "heur_id": "EXTRACT_1",
+            "name": "Extracted from archive",
+            "score": 0
+          }
+        ]
+      },
+      "submission": {
+        "metadata": {},
+        "date": "2022-08-02T17:51:08.494955Z",
+        "source_system": "staging.mlwr.ca",
+        "sid": "RC0jnu0CXGPUrPBSxA40U",
+        "classification": "TLP:WHITE",
+        "submitter": "auser"
+      }
+    },
+    {
+      "odm_type": "Assemblyline Result Ontology",
+      "odm_version": "1.0",
+      "classification": "TLP:WHITE",
+      "file": {
+        "md5": "4d4ca18aed6c4a3878fffa80fdeb1874",
+        "sha1": "8d5d39f6b8757d3bab35b34ada30d74d3629e139",
+        "sha256": "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4",
+        "type": "archive/zip",
+        "size": 134,
+        "parent": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7"
+      },
+      "service": {
+        "name": "Extract",
+        "version": "4.2.0.dev79",
+        "tool_version": null
+      },
+      "results": {
+        "tags": {
+          "file.name.extracted": ["things/orbit.txt"]
+        },
+        "heuristics": [
+          {
+            "tags": {
+              "file.name.extracted": ["things/orbit.txt"]
+            },
+            "times_raised": 1,
+            "heur_id": "EXTRACT_1",
+            "name": "Extracted from archive",
+            "score": 0
+          }
+        ]
+      },
+      "submission": {
+        "metadata": {},
+        "date": "2022-08-02T17:51:08.494955Z",
+        "source_system": "staging.mlwr.ca",
+        "sid": "RC0jnu0CXGPUrPBSxA40U",
+        "classification": "TLP:WHITE",
+        "submitter": "auser"
+      }
+    },
+    {
+      "odm_type": "Assemblyline Result Ontology",
+      "odm_version": "1.0",
+      "classification": "TLP:WHITE",
+      "file": {
+        "md5": "4b04dfea90a8554d3c1f0a668b45fc4c",
+        "sha1": "58a62baa66adf24fedf2f87f83768424b9520734",
+        "sha256": "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2",
+        "type": "archive/zip",
+        "size": 631,
+        "parent": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7"
+      },
+      "service": {
+        "name": "Extract",
+        "version": "4.2.0.dev79",
+        "tool_version": null
+      },
+      "results": {
+        "tags": {
+          "file.name.extracted": [
+            "tester/metronome.zip",
+            "tester/file1.txt",
+            "tester/things/orbit.txt"
+          ]
+        },
+        "heuristics": [
+          {
+            "tags": {
+              "file.name.extracted": [
+                "tester/metronome.zip",
+                "tester/file1.txt",
+                "tester/things/orbit.txt"
+              ]
+            },
+            "times_raised": 1,
+            "heur_id": "EXTRACT_1",
+            "name": "Extracted from archive",
+            "score": 0
+          }
+        ]
+      },
+      "submission": {
+        "metadata": {},
+        "date": "2022-08-02T17:51:08.494955Z",
+        "source_system": "staging.mlwr.ca",
+        "sid": "RC0jnu0CXGPUrPBSxA40U",
+        "classification": "TLP:WHITE",
+        "submitter": "auser"
+      }
+    }
+  ],
+  "full": {
+    "archive_ts": "2022-08-17T17:51:08.494820Z",
+    "classification": "TLP:WHITE",
+    "error_count": 0,
+    "errors": {},
+    "expiry_ts": "2022-09-01T14:53:20.589624Z",
+    "file_count": 5,
+    "file_infos": {
+      "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4": {
+        "archive_ts": "2022-08-17T17:51:09.560532Z",
+        "ascii": "PK........s\\.TM..F............things/orbit.txtyeahPK..........s\\",
+        "classification": "TLP:WHITE",
+        "entropy": 3.867552065629809,
+        "expiry_ts": "2022-09-01T17:51:09.545139Z",
+        "hex": "504b0304140000000000735cf3544d8ae0460400000004000000100000007468696e67732f6f726269742e74787479656168504b01021400140000000000735c",
+        "is_section_image": false,
+        "magic": "Zip archive data, at least v2.0 to extract",
+        "md5": "4d4ca18aed6c4a3878fffa80fdeb1874",
+        "mime": "application/zip",
+        "seen": {
+          "count": 8,
+          "first": "2022-07-19T15:36:36.190155Z",
+          "last": "2022-08-02T17:51:09.567190Z"
+        },
+        "sha1": "8d5d39f6b8757d3bab35b34ada30d74d3629e139",
+        "sha256": "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4",
+        "size": 134,
+        "ssdeep": "3:vhjZgNl7HlZNZWxwYjjtbgNl7Hltll72WxwjB+lol/:5jZgNBWXjjZgNd2WG+l4",
+        "type": "archive/zip"
+      },
+      "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2": {
+        "archive_ts": "2022-08-17T17:51:09.053325Z",
+        "ascii": "PK........i\\.T.cS.............tester/file1.txtsome bad things ma",
+        "classification": "TLP:WHITE",
+        "entropy": 4.198168127003845,
+        "expiry_ts": "2022-09-01T17:51:09.006638Z",
+        "hex": "504b0304140000000000695cf354186353f41500000015000000100000007465737465722f66696c65312e747874736f6d6520626164207468696e6773206d61",
+        "is_section_image": false,
+        "magic": "Zip archive data, at least v2.0 to extract",
+        "md5": "4b04dfea90a8554d3c1f0a668b45fc4c",
+        "mime": "application/zip",
+        "seen": {
+          "count": 4,
+          "first": "2022-07-19T15:36:36.100002Z",
+          "last": "2022-08-02T17:51:09.058285Z"
+        },
+        "sha1": "58a62baa66adf24fedf2f87f83768424b9520734",
+        "sha256": "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2",
+        "size": 631,
+        "ssdeep": "12:5jFRiAbpWDzW+BcQMhaqjsFm5utHm11KiLOzpotHmNutJw6:9zpWxB1M9FucnguT",
+        "type": "archive/zip"
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b": {
+        "archive_ts": "2022-08-17T17:51:09.565092Z",
+        "ascii": "yeah",
+        "classification": "TLP:WHITE",
+        "entropy": 2.0,
+        "expiry_ts": "2022-09-01T17:51:09.545139Z",
+        "hex": "79656168",
+        "is_section_image": false,
+        "magic": "ASCII text, with no line terminators",
+        "md5": "29814d7ba6b9db8d5ab57fd57ceb9c1a",
+        "mime": "text/plain",
+        "seen": {
+          "count": 12,
+          "first": "2022-07-19T15:36:36.273889Z",
+          "last": "2022-08-02T17:51:09.571448Z"
+        },
+        "sha1": "e029e41f4e015e2ea604a0d81a05a05186f15b03",
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": 4,
+        "ssdeep": "3:xkn:O",
+        "type": "text/plain"
+      },
+      "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7": {
+        "archive_ts": "2022-08-17T14:53:20.594866Z",
+        "ascii": "PK........i\\.T.cS.............tester/file1.txtsome bad things ma",
+        "classification": "TLP:WHITE",
+        "entropy": 4.273670368079247,
+        "expiry_ts": "2022-09-01T14:53:20.589624Z",
+        "hex": "504b0304140000000000695cf354186353f41500000015000000100000007465737465722f66696c65312e747874736f6d6520626164207468696e6773206d61",
+        "is_section_image": false,
+        "magic": "Zip archive data, at least v2.0 to extract",
+        "md5": "ca4b1ffdfb54daac6545ed6245c34544",
+        "mime": "application/zip",
+        "seen": {
+          "count": 3,
+          "first": "2022-07-19T15:36:35.375634Z",
+          "last": "2022-08-02T14:53:20.601053Z"
+        },
+        "sha1": "29ad5082d073ba5dacf4ee3372746b5e1e0223b6",
+        "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7",
+        "size": 1372,
+        "ssdeep": "24:9zpWxB1M9eWpWxB1M9Fucngu5FucK7UguCyD:9tgW9xgW90K50qvD",
+        "type": "archive/zip"
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844": {
+        "archive_ts": "2022-08-17T17:51:09.562648Z",
+        "ascii": "some bad things maybe",
+        "classification": "TLP:WHITE",
+        "entropy": 3.6897037321995474,
+        "expiry_ts": "2022-09-01T17:51:09.545139Z",
+        "hex": "736f6d6520626164207468696e6773206d61796265",
+        "is_section_image": false,
+        "magic": "ASCII text, with no line terminators",
+        "md5": "a21ec7e3ff690fa14c75c0372a613906",
+        "mime": "text/plain",
+        "seen": {
+          "count": 8,
+          "first": "2022-07-19T15:36:36.234757Z",
+          "last": "2022-08-02T17:51:09.569461Z"
+        },
+        "sha1": "59e5257a0a9579729158448d6eb947259b6900b5",
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": 21,
+        "ssdeep": "3:BorbpA:2bpA",
+        "type": "text/plain"
+      }
+    },
+    "file_tree": {
+      "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7": {
+        "children": {
+          "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2": {
+            "children": {
+              "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4": {
+                "children": {
+                  "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b": {
+                    "children": {},
+                    "name": ["tester/things/orbit.txt", "things/orbit.txt"],
+                    "score": 0,
+                    "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+                    "size": 4,
+                    "truncated": false,
+                    "type": "text/plain"
+                  }
+                },
+                "name": ["tester/metronome.zip"],
+                "score": 0,
+                "sha256": "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4",
+                "size": 134,
+                "truncated": false,
+                "type": "archive/zip"
+              },
+              "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844": {
+                "children": {},
+                "name": ["tester/file1.txt"],
+                "score": 0,
+                "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+                "size": 21,
+                "truncated": false,
+                "type": "text/plain"
+              }
+            },
+            "name": ["tester/nested.zip"],
+            "score": 0,
+            "sha256": "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2",
+            "size": 631,
+            "truncated": true,
+            "type": "archive/zip"
+          }
+        },
+        "name": ["tester.zip"],
+        "score": 0,
+        "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7",
+        "size": 1372,
+        "truncated": true,
+        "type": "archive/zip"
+      }
+    },
+    "files": [
+      {
+        "name": "tester.zip",
+        "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7",
+        "size": 1372
+      }
+    ],
+    "max_score": 0,
+    "metadata": {},
+    "missing_error_keys": [],
+    "missing_file_keys": [],
+    "missing_result_keys": [],
+    "params": {
+      "classification": "TLP:WHITE",
+      "deep_scan": false,
+      "description": "Resubmit tester.zip for analysis",
+      "generate_alert": false,
+      "groups": ["USERS"],
+      "ignore_cache": false,
+      "ignore_dynamic_recursion_prevention": false,
+      "ignore_filtering": false,
+      "ignore_size": false,
+      "initial_data": null,
+      "malicious": false,
+      "max_extracted": 500,
+      "max_supplementary": 500,
+      "never_drop": false,
+      "priority": 1000,
+      "profile": false,
+      "psid": null,
+      "quota_item": true,
+      "service_spec": {},
+      "services": {
+        "excluded": [],
+        "rescan": [],
+        "resubmit": [],
+        "runtime_excluded": [],
+        "selected": ["Static Analysis", "Networking", "Extraction", "Filtering"]
+      },
+      "submitter": "auser",
+      "ttl": 30,
+      "type": "USER"
+    },
+    "results": {
+      "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4.Extract.v4_2_0_dev79.cCzaCemNzMAZ": {
+        "archive_ts": "2022-08-17T17:51:09.428685Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.428752Z",
+        "drop_file": true,
+        "expiry_ts": "2022-09-01T17:51:09.428698Z",
+        "response": {
+          "extracted": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "things/orbit.txt",
+              "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b"
+            }
+          ],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.355867Z",
+            "service_started": "2022-08-02T17:51:09.308536Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Extract",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev79",
+          "supplementary": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Result Ontology from Extract",
+              "is_section_image": false,
+              "name": "extract_72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4.ontology",
+              "sha256": "734ef51cb2c64e1bcd3b407d465c064274bdc438b7ab951498fa4a605ce64e8d"
+            }
+          ]
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": "things/orbit.txt",
+              "body_format": "TEXT",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": {
+                "attack": [],
+                "heur_id": "EXTRACT.1",
+                "name": "Extracted from archive",
+                "score": 0,
+                "signature": []
+              },
+              "tags": [
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "things/orbit.txt"
+                }
+              ],
+              "title_text": "Successfully extracted 1 file"
+            }
+          ]
+        },
+        "sha256": "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4",
+        "size": 134,
+        "type": "archive/zip"
+      },
+      "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2.Extract.v4_2_0_dev79.cCzaCemNzMAZ": {
+        "archive_ts": "2022-08-17T17:51:09.621503Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.621571Z",
+        "drop_file": true,
+        "expiry_ts": "2022-09-01T17:51:09.621520Z",
+        "response": {
+          "extracted": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/metronome.zip",
+              "sha256": "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4"
+            },
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/file1.txt",
+              "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844"
+            },
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/things/orbit.txt",
+              "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b"
+            }
+          ],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.543685Z",
+            "service_started": "2022-08-02T17:51:09.477541Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Extract",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev79",
+          "supplementary": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Result Ontology from Extract",
+              "is_section_image": false,
+              "name": "extract_98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2.ontology",
+              "sha256": "0ad30997008f0801859ba00a04211fd25e79146d0ce6c064d52565d4570fbc9c"
+            }
+          ]
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": "tester/metronome.zip\ntester/file1.txt\ntester/things/orbit.txt",
+              "body_format": "TEXT",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": {
+                "attack": [],
+                "heur_id": "EXTRACT.1",
+                "name": "Extracted from archive",
+                "score": 0,
+                "signature": []
+              },
+              "tags": [
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/metronome.zip"
+                },
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/file1.txt"
+                },
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/things/orbit.txt"
+                }
+              ],
+              "title_text": "Successfully extracted 3 files"
+            }
+          ]
+        },
+        "sha256": "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2",
+        "size": 631,
+        "type": "archive/zip"
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.Characterize.v4_2_0_dev67.c8DezVLINOKJ": {
+        "archive_ts": "2022-08-17T17:51:09.333936Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T14:53:23.740412Z",
+        "drop_file": false,
+        "expiry_ts": "2022-09-01T17:51:09.333971Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T14:53:23.739046Z",
+            "service_started": "2022-08-02T14:53:23.608309Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Characterize",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev67",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": {
+                "data": {
+                  "domain": [0, 8],
+                  "values": [
+                    -0.0, -0.0, -0.0, -0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                  ]
+                },
+                "type": "colormap"
+              },
+              "body_format": "GRAPH_DATA",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": null,
+              "tags": [],
+              "title_text": "File entropy: 2.0"
+            }
+          ]
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": 4,
+        "type": "text/plain"
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.Codevector.v4_2_0_dev41.c8DezVLINOKJ.e": {
+        "archive_ts": "2022-08-17T17:51:09.885474Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.885512Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.885480Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.885580Z",
+            "service_started": "2022-08-02T17:51:09.885559Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Codevector",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev41",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": null,
+        "type": null
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.ConfigExtractor.v4_2_1_dev8.cFpPv81BELxW": {
+        "archive_ts": "2022-08-17T17:51:09.647521Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.647917Z",
+        "drop_file": false,
+        "expiry_ts": "2022-09-01T17:51:09.647537Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.646774Z",
+            "service_started": "2022-08-02T17:51:09.624507Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "ConfigExtractor",
+          "service_tool_version": "/update",
+          "service_version": "4.2.1.dev8",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": {
+                "CAPE": {}
+              },
+              "body_format": "JSON",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": null,
+              "tags": [],
+              "title_text": "Output"
+            }
+          ]
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": 4,
+        "type": "text/plain"
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.FrankenStrings.v4_2_0_dev51.c8DezVLINOKJ": {
+        "archive_ts": "2022-08-17T17:51:09.339208Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-07-22T14:22:02.075895Z",
+        "drop_file": false,
+        "expiry_ts": "2022-09-01T17:51:09.339248Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-07-22T14:22:02.053570Z",
+            "service_started": "2022-07-22T14:22:02.000470Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "FrankenStrings",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev51",
+          "supplementary": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Multidecoder json",
+              "is_section_image": false,
+              "name": "a495a4b8_md.json",
+              "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+          ]
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": 4,
+        "type": "text/plain"
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.MetaPeek.v4_2_0_dev47.c8DezVLINOKJ.e": {
+        "archive_ts": "2022-08-17T17:51:09.885858Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.885894Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.885863Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.885962Z",
+            "service_started": "2022-08-02T17:51:09.885941Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "MetaPeek",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev47",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": null,
+        "type": null
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.TagCheck.v4_2_0_dev67.cQK1LtHG99I.e": {
+        "archive_ts": "2022-08-17T17:51:09.886240Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.886276Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.886246Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.886342Z",
+            "service_started": "2022-08-02T17:51:09.886322Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "TagCheck",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev67",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": null,
+        "type": null
+      },
+      "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b.YARA.v4_2_0_dev67.cB1GffXycwt7.e": {
+        "archive_ts": "2022-08-17T17:51:09.885282Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.885319Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.885288Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.885388Z",
+            "service_started": "2022-08-02T17:51:09.885367Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "YARA",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev67",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b",
+        "size": null,
+        "type": null
+      },
+      "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7.Extract.v4_2_0_dev79.cCzaCemNzMAZ": {
+        "archive_ts": "2022-08-17T17:51:09.126728Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.126797Z",
+        "drop_file": true,
+        "expiry_ts": "2022-09-01T17:51:09.126743Z",
+        "response": {
+          "extracted": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/nested.zip",
+              "sha256": "98f940cb17165e4c855051c4e8e2bdd4a8d5e171a008febdad2ecdd8240750e2"
+            },
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/metronome.zip",
+              "sha256": "72ca8fc6d0e6d84ac70464d34a701e60d28b2c93dc6f955b7635816e14199ce4"
+            },
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/file1.txt",
+              "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844"
+            },
+            {
+              "classification": "TLP:WHITE",
+              "description": "Extracted using extract_zip",
+              "is_section_image": false,
+              "name": "tester/things/orbit.txt",
+              "sha256": "a495a4b86c1eac64327d8cad2598044314d9176f0ac069fbea0cf0baf08b6c9b"
+            }
+          ],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.005359Z",
+            "service_started": "2022-08-02T17:51:08.926035Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Extract",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev79",
+          "supplementary": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Result Ontology from Extract",
+              "is_section_image": false,
+              "name": "extract_c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7.ontology",
+              "sha256": "4e0fdbc96024c85c8e7a6976e54250deeb736b027c913b4a7e005226b1882bcc"
+            }
+          ]
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": "tester/nested.zip\ntester/metronome.zip\ntester/file1.txt\ntester/things/orbit.txt",
+              "body_format": "TEXT",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": {
+                "attack": [],
+                "heur_id": "EXTRACT.1",
+                "name": "Extracted from archive",
+                "score": 0,
+                "signature": []
+              },
+              "tags": [
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/nested.zip"
+                },
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/metronome.zip"
+                },
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/file1.txt"
+                },
+                {
+                  "safelisted": false,
+                  "short_type": "extracted",
+                  "type": "file.name.extracted",
+                  "value": "tester/things/orbit.txt"
+                }
+              ],
+              "title_text": "Successfully extracted 4 files"
+            }
+          ]
+        },
+        "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7",
+        "size": 1372,
+        "type": "archive/zip"
+      },
+      "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7.Safelist.v4_2_0_dev42.c993w6QT4QDk.e": {
+        "archive_ts": "2022-08-17T17:51:09.884579Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.884681Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.884595Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.884767Z",
+            "service_started": "2022-08-02T17:51:09.884745Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Safelist",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev42",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7",
+        "size": null,
+        "type": null
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.Characterize.v4_2_0_dev67.c8DezVLINOKJ": {
+        "archive_ts": "2022-08-17T17:51:09.306087Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T14:53:23.469767Z",
+        "drop_file": false,
+        "expiry_ts": "2022-09-01T17:51:09.306145Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T14:53:23.468371Z",
+            "service_started": "2022-08-02T14:53:23.326281Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Characterize",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev67",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": {
+                "data": {
+                  "domain": [0, 8],
+                  "values": [
+                    -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0,
+                    -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0,
+                    -0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                  ]
+                },
+                "type": "colormap"
+              },
+              "body_format": "GRAPH_DATA",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": null,
+              "tags": [],
+              "title_text": "File entropy: 3.69"
+            }
+          ]
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": 21,
+        "type": "text/plain"
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.Codevector.v4_2_0_dev41.c8DezVLINOKJ.e": {
+        "archive_ts": "2022-08-17T17:51:09.885089Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.885128Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.885095Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.885195Z",
+            "service_started": "2022-08-02T17:51:09.885174Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "Codevector",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev41",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": null,
+        "type": null
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.ConfigExtractor.v4_2_1_dev8.cFpPv81BELxW": {
+        "archive_ts": "2022-08-17T17:51:09.431623Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.432266Z",
+        "drop_file": false,
+        "expiry_ts": "2022-09-01T17:51:09.431641Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.430525Z",
+            "service_started": "2022-08-02T17:51:09.408311Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "ConfigExtractor",
+          "service_tool_version": "/update",
+          "service_version": "4.2.1.dev8",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": [
+            {
+              "auto_collapse": false,
+              "body": {
+                "CAPE": {
+                  "LokiBot": {
+                    "author": "sysopfb",
+                    "config": {
+                      "family": "LokiBot",
+                      "other": {
+                        "address": []
+                      }
+                    },
+                    "description": "LokiBot configuration parser."
+                  }
+                }
+              },
+              "body_format": "JSON",
+              "classification": "TLP:WHITE",
+              "depth": 0,
+              "heuristic": null,
+              "tags": [],
+              "title_text": "Output"
+            }
+          ]
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": 21,
+        "type": "text/plain"
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.FrankenStrings.v4_2_0_dev51.c8DezVLINOKJ": {
+        "archive_ts": "2022-08-17T17:51:09.304893Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-07-22T14:22:01.952916Z",
+        "drop_file": false,
+        "expiry_ts": "2022-09-01T17:51:09.304930Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-07-22T14:22:01.896679Z",
+            "service_started": "2022-07-22T14:22:01.839497Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "FrankenStrings",
+          "service_tool_version": null,
+          "service_version": "4.2.0.dev51",
+          "supplementary": [
+            {
+              "classification": "TLP:WHITE",
+              "description": "Multidecoder json",
+              "is_section_image": false,
+              "name": "e6dfab4a_md.json",
+              "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+          ]
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": 21,
+        "type": "text/plain"
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.MetaPeek.v4_2_0_dev47.c8DezVLINOKJ.e": {
+        "archive_ts": "2022-08-17T17:51:09.885666Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.885703Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.885672Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.885771Z",
+            "service_started": "2022-08-02T17:51:09.885749Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "MetaPeek",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev47",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": null,
+        "type": null
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.TagCheck.v4_2_0_dev67.cQK1LtHG99I.e": {
+        "archive_ts": "2022-08-17T17:51:09.886050Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.886087Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.886055Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.886154Z",
+            "service_started": "2022-08-02T17:51:09.886133Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "TagCheck",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev67",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": null,
+        "type": null
+      },
+      "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844.YARA.v4_2_0_dev67.cB1GffXycwt7.e": {
+        "archive_ts": "2022-08-17T17:51:09.884893Z",
+        "classification": "TLP:WHITE",
+        "created": "2022-08-02T17:51:09.884932Z",
+        "drop_file": false,
+        "expiry_ts": "2022-08-17T17:51:09.884899Z",
+        "response": {
+          "extracted": [],
+          "milestones": {
+            "service_completed": "2022-08-02T17:51:09.885001Z",
+            "service_started": "2022-08-02T17:51:09.884980Z"
+          },
+          "service_context": null,
+          "service_debug_info": null,
+          "service_name": "YARA",
+          "service_tool_version": null,
+          "service_version": "4_2_0_dev67",
+          "supplementary": []
+        },
+        "result": {
+          "score": 0,
+          "sections": []
+        },
+        "sha256": "e6dfab4aa1338811a8d679c4b9edb7291f3bbf493fa4f6b3da922ef82a4e3844",
+        "size": null,
+        "type": null
+      }
+    },
+    "scan_key": null,
+    "sid": "RC0jnu0CXGPUrPBSxA40U",
+    "state": "completed",
+    "times": {
+      "completed": "2022-08-02T17:51:09.720883Z",
+      "submitted": "2022-08-02T17:51:08.494955Z"
+    },
+    "verdict": {
+      "malicious": [],
+      "non_malicious": []
+    }
+  }
+}
