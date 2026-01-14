@@ -24,7 +24,7 @@ from packaging.version import parse as parse_version
 from azul_plugin_assemblyline import common
 from azul_plugin_assemblyline.settings import Settings as AlClientSettings
 
-from . import models, typemap
+from . import models
 
 
 class ServerVersionException(Exception):
@@ -327,10 +327,6 @@ class AzulPluginAssemblyline(BinaryPlugin):
             c.md5 = file_info.md5
             c.size = _tree.size
             c.file_format = file_info.type
-            # if we can't work out the file type, then we depend on Azul plugins extracting
-            # and identifying the file.
-            if _type := typemap.map_type(file_info.type):
-                c.file_format_legacy = _type
         else:
             # this is a root of the tree
             c = self._event_main

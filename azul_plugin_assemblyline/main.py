@@ -232,7 +232,7 @@ def process_submission(api_action: models.ActionApi, al_client: al.Client4):
         label=azm.DataLabel.ASSEMBLYLINE,
         hash=sha256,
         init_data=meta_contents,
-        file_info=azm.Datastream(label=azm.DataLabel.ASSEMBLYLINE, file_format_legacy="Text", file_format="text/json"),
+        file_info=azm.Datastream(label=azm.DataLabel.ASSEMBLYLINE, file_format="text/json"),
         allow_unbounded_read=True,
     ) as meta_spf:
         if submitted_by_azul:

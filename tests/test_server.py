@@ -323,7 +323,6 @@ class TestBasic(unittest.IsolatedAsyncioTestCase):
                 sha512="dummy-sha512",
                 size=1,
                 file_format="text/plain",
-                file_format_legacy="Text",
             ),
         )
         meta_data = meta.model_dump()
@@ -387,7 +386,7 @@ class TestBasic(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(
             json.loads(shared_list[1]),
             {
-                "source_file_info": '{"sha256":"dummy-sha256","sha512":"dummy-sha512","size":1,"file_format_legacy":"Text","file_format":"text/plain"}',
+                "source_file_info": '{"sha256":"dummy-sha256","sha512":"dummy-sha512","size":1,"file_format":"text/plain"}',
                 "source_info": '{"security":"OFFICIAL","name":"testing","timestamp":"2024-01-01T10:10:10+00:00","references":{"description":"azul descr","custom_ref":"Custom reference value!"},"path":[{"sha256":"dummy-sha256","action":"sourced","timestamp":"2024-01-01T10:10:10+00:00","author":{"name":"dummy-plugin","security":"OFFICIAL"}}]}',
                 "security": "OFFICIAL TLP:CLEAR",
                 "relationship": {"external": "Enriched by Assemblyline"},

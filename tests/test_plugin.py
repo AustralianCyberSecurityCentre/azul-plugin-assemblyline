@@ -9,13 +9,11 @@ from azul_runner import (
     Event,
     EventData,
     EventParent,
-    Filepath,
     JobResult,
     State,
     test_template,
 )
 
-from azul_plugin_assemblyline import typemap
 from azul_plugin_assemblyline.plugin import AzulPluginAssemblyline, common
 from azul_plugin_assemblyline.settings import Settings as alSettings
 from tests.support import resetEnv
@@ -38,14 +36,6 @@ class TestExecute(test_template.TestPlugin):
     def tearDown(self):
         common.setup_al_client = self.original_setup_client
         common.download_uncarted_al_file = self.original_download_uncarted_al_file
-
-    def test_map(self):
-        self.assertEqual("Text", typemap.map_type("text/unknownfallback"))
-        self.assertEqual("Text", typemap.map_type("text/json"))
-        self.assertEqual("Text", typemap.map_type("code/plorglam"))
-        self.assertEqual(None, typemap.map_type("unknown"))
-        self.assertEqual(None, typemap.map_type("blarg/unknownfallback"))
-        self.assertEqual(None, typemap.map_type("codeunknownfallback"))
 
     def test_bad_version(self):
         """Test an expected normal run"""
@@ -85,7 +75,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="58a62baa66adf24fedf2f87f83768424b9520734",
                         md5="4b04dfea90a8554d3c1f0a668b45fc4c",
                         size=631,
-                        file_format_legacy="ZIP",
                         file_format="archive/zip",
                         mime="application/zip",
                         magic="Zip archive data, at least v2.0 to extract",
@@ -108,7 +97,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="59e5257a0a9579729158448d6eb947259b6900b5",
                         md5="a21ec7e3ff690fa14c75c0372a613906",
                         size=21,
-                        file_format_legacy="Text",
                         file_format="text/plain",
                         mime="text/plain",
                         magic="ASCII text, with no line terminators",
@@ -117,7 +105,6 @@ class TestExecute(test_template.TestPlugin):
                             sha1="58a62baa66adf24fedf2f87f83768424b9520734",
                             md5="4b04dfea90a8554d3c1f0a668b45fc4c",
                             size=631,
-                            file_format_legacy="ZIP",
                             file_format="archive/zip",
                             mime="application/zip",
                             magic="Zip archive data, at least v2.0 to extract",
@@ -143,7 +130,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="e029e41f4e015e2ea604a0d81a05a05186f15b03",
                         md5="29814d7ba6b9db8d5ab57fd57ceb9c1a",
                         size=4,
-                        file_format_legacy="Text",
                         file_format="text/plain",
                         mime="text/plain",
                         magic="ASCII text, with no line terminators",
@@ -152,7 +138,6 @@ class TestExecute(test_template.TestPlugin):
                             sha1="8d5d39f6b8757d3bab35b34ada30d74d3629e139",
                             md5="4d4ca18aed6c4a3878fffa80fdeb1874",
                             size=134,
-                            file_format_legacy="ZIP",
                             file_format="archive/zip",
                             mime="application/zip",
                             magic="Zip archive data, at least v2.0 to extract",
@@ -161,7 +146,6 @@ class TestExecute(test_template.TestPlugin):
                                 sha1="58a62baa66adf24fedf2f87f83768424b9520734",
                                 md5="4b04dfea90a8554d3c1f0a668b45fc4c",
                                 size=631,
-                                file_format_legacy="ZIP",
                                 file_format="archive/zip",
                                 mime="application/zip",
                                 magic="Zip archive data, at least v2.0 to extract",
@@ -269,7 +253,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="45a39c509a255851e9eaa6b32b19c8719ec3eb2e",
                         md5="03a0cbf61e478d71c6345bda66a01a6a",
                         size=12721664,
-                        file_format_legacy="Win32 EXE",
                         file_format="executable/windows/pe32",
                         mime="application/vnd.microsoft.portable-executable",
                         magic="PE32 executable (GUI) Intel 80386, for MS Windows, 4 sections",
@@ -336,7 +319,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="eceea561949ba95a954f40c3fda5849927bf2382",
                         md5="c12835d0f68f00f620859ad48376699e",
                         size=7680,
-                        file_format_legacy="Win32 EXE",
                         file_format="unknown",
                         mime="application/octet-stream",
                         magic="data",
@@ -345,7 +327,6 @@ class TestExecute(test_template.TestPlugin):
                             sha1="06ecff4f7c6ff69e7049920d2a9e182bace86a32",
                             md5="350d38918a181c4e77713cc566440376",
                             size=504088,
-                            file_format_legacy="Win32 EXE",
                             file_format="executable/windows/pe32",
                             mime="application/vnd.microsoft.portable-executable",
                             magic="PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, Nullsoft Installer self-extracting archive, 7 sections",
@@ -481,7 +462,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="168f3c158913b0367bf79fa413357fbe97018191",
                         md5="a5f8399a743ab7f9c88c645c35b1ebb5",
                         size=14848,
-                        file_format_legacy="Win32 DLL",
                         file_format="executable/windows/dll32",
                         mime="application/vnd.microsoft.portable-executable",
                         magic="PE32 executable (DLL) (GUI) Intel 80386, for MS Windows, 4 sections",
@@ -490,7 +470,6 @@ class TestExecute(test_template.TestPlugin):
                             sha1="9161574590f09cfe4c24498827386ed57f2e8c58",
                             md5="06baef00ae0f0e42fc5fea24fc4eac42",
                             size=218624,
-                            file_format_legacy="Win32 EXE",
                             file_format="executable/windows/pe32",
                             mime="application/vnd.microsoft.portable-executable",
                             magic="PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, 8 sections",
@@ -499,7 +478,6 @@ class TestExecute(test_template.TestPlugin):
                                 sha1="06ecff4f7c6ff69e7049920d2a9e182bace86a32",
                                 md5="350d38918a181c4e77713cc566440376",
                                 size=504088,
-                                file_format_legacy="Win32 EXE",
                                 file_format="executable/windows/pe32",
                                 mime="application/vnd.microsoft.portable-executable",
                                 magic="PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, Nullsoft Installer self-extracting archive, 7 sections",
@@ -556,7 +534,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="30b289e09fbc61eb6d29169b4ee9f9b9910b7bd9",
                         md5="01e85bb88c8a4f42be091c6a5773f638",
                         size=1536,
-                        file_format_legacy="Text",
                         file_format="unknown",
                         mime="application/octet-stream",
                         magic="data",
@@ -573,7 +550,6 @@ class TestExecute(test_template.TestPlugin):
                                 sha1="9161574590f09cfe4c24498827386ed57f2e8c58",
                                 md5="06baef00ae0f0e42fc5fea24fc4eac42",
                                 size=218624,
-                                file_format_legacy="Win32 EXE",
                                 file_format="executable/windows/pe32",
                                 mime="application/vnd.microsoft.portable-executable",
                                 magic="PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, 8 sections",
@@ -582,7 +558,6 @@ class TestExecute(test_template.TestPlugin):
                                     sha1="06ecff4f7c6ff69e7049920d2a9e182bace86a32",
                                     md5="350d38918a181c4e77713cc566440376",
                                     size=504088,
-                                    file_format_legacy="Win32 EXE",
                                     file_format="executable/windows/pe32",
                                     mime="application/vnd.microsoft.portable-executable",
                                     magic="PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows, Nullsoft Installer self-extracting archive, 7 sections",
@@ -683,7 +658,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="181ca669eb1e91afb4f5efc37eaf556c475e6e9a",
                         md5="40693af66361ac936bc9f59006ab1142",
                         size=82397,
-                        file_format_legacy="CART",
                         file_format="archive/cart",
                         mime="application/octet-stream",
                         magic="custom: archive/cart",
@@ -709,7 +683,6 @@ class TestExecute(test_template.TestPlugin):
                         sha1="0a4ed360e4e0626138d3a53032d23f705707b421",
                         md5="6f5e21db36c58892d50834f647e8a8d7",
                         size=287232,
-                        file_format_legacy="DOS EXE",
                         file_format="executable/windows/dos",
                         mime="application/octet-stream",
                         magic="MS-DOS executable",
@@ -718,7 +691,6 @@ class TestExecute(test_template.TestPlugin):
                             sha1="181ca669eb1e91afb4f5efc37eaf556c475e6e9a",
                             md5="40693af66361ac936bc9f59006ab1142",
                             size=82397,
-                            file_format_legacy="CART",
                             file_format="archive/cart",
                             mime="application/octet-stream",
                             magic="custom: archive/cart",
