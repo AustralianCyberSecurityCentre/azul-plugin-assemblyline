@@ -106,7 +106,6 @@ def gen_action(classification="TLP:CLEAR"):
 
 
 def gen_tree(classification="TLP:CLEAR") -> dict:
-
     return {
         "c4a96518b134c88271036f542fb1f84965f75e8d0bdad613b64da705dde159e7": models.SubTree(
             **{

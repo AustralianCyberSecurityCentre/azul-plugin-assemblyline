@@ -14,11 +14,9 @@ from azul_runner import (
     State,
     add_settings,
     cmdline_run,
-)
-from azul_runner import settings as azr_settings
-from azul_runner import (
     storage,
 )
+from azul_runner import settings as azr_settings
 from packaging.version import parse as parse_version
 
 from azul_plugin_assemblyline import common

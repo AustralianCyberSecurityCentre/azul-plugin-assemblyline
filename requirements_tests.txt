@@ -1,7 +1,0 @@
-azul-runner[test-utils]
-cart
-httpx
-parameterized
-pytest
-starlette
-tox

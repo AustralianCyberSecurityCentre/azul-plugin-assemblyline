@@ -291,7 +291,7 @@ def main():
     for header_label, header_val in settings.plugin_headers.items():
         headers.append((header_label.strip(), header_val.strip()))
 
-    uvicorn.run(app, host="0.0.0.0", port=8850, log_level="info", headers=headers)  # nosec B104
+    uvicorn.run(app, host="0.0.0.0", port=8850, log_level="info", headers=headers)  # noqa: S104
 
 
 if __name__ == "__main__":
