@@ -8,7 +8,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-03-31T05:31:03.951935024Z"
+exclude-newer = "2026-03-31T06:29:56.662060793Z"
 exclude-newer-span = "P1W"
 
 [options.exclude-newer-package]
@@ -132,7 +132,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "assemblyline-client", specifier = ">=4.9.9" },
-    { name = "azul-runner", specifier = ">=9.0.38", index = "https://devpi.acsc.internal/azul/stable/" },
+    { name = "azul-runner", specifier = ">=11.0.33", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "azul-security", specifier = ">=10.0.12", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "fastapi", specifier = ">=0.128.0" },
     { name = "packaging", specifier = ">=26.0" },
