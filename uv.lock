@@ -8,7 +8,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-04-01T00:45:09.085443186Z"
+exclude-newer = "2026-04-01T01:06:34.661516228Z"
 exclude-newer-span = "P1W"
 
 [options.exclude-newer-package]
@@ -68,8 +68,8 @@ wheels = [
 
 [[package]]
 name = "azul-bedrock"
-version = "10.0.45"
-source = { registry = "https://pypi.org/simple" }
+version = "11.0.26"
+source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "babel" },
     { name = "cachetools" },
@@ -85,9 +85,8 @@ dependencies = [
     { name = "starlette" },
     { name = "yara-python" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/33/73/172a53dc21b0d22ce0493acde50ddfa5ec30b58ed131b678148f34e229b2/azul_bedrock-10.0.45.tar.gz", hash = "sha256:111ab9cf950892fba6c4b52518edafca22fae9524274aa8224941f1cd6a04cd5", size = 256893, upload-time = "2026-03-13T03:08:36.855Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1d/d1/1bc3d9bafac28275f22dc21a40d4b25c1bf7b0ea86a8bc7efc5bf9af2a25/azul_bedrock-10.0.45-py3-none-any.whl", hash = "sha256:8378d04aaa93ac073bfa4cfb53885aaf4313b0a0c90cef7a0048f8868f4c1f80", size = 93517, upload-time = "2026-03-13T03:08:34.938Z" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/65f/8c4e1c3822d11/azul_bedrock-11.0.26-py3-none-any.whl", hash = "sha256:65f8c4e1c3822d11927b66c47312f74d2092a83ce3568e72d1692885b31517b5" },
 ]
 
 [package.optional-dependencies]
@@ -105,6 +104,7 @@ name = "azul-plugin-assemblyline"
 source = { editable = "." }
 dependencies = [
     { name = "assemblyline-client" },
+    { name = "azul-bedrock" },
     { name = "azul-runner" },
     { name = "azul-security" },
     { name = "fastapi" },
@@ -132,6 +132,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "assemblyline-client", specifier = ">=4.9.9" },
+    { name = "azul-bedrock", specifier = ">=11.0.26", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "azul-runner", specifier = ">=11.0.33", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "azul-security", specifier = ">=10.0.12", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "fastapi", specifier = ">=0.128.0" },
@@ -1668,15 +1669,15 @@ wheels = [
 
 [[package]]
 name = "sentry-sdk"
-version = "2.56.0"
+version = "2.57.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/de/df/5008954f5466085966468612a7d1638487596ee6d2fd7fb51783a85351bf/sentry_sdk-2.56.0.tar.gz", hash = "sha256:fdab72030b69625665b2eeb9738bdde748ad254e8073085a0ce95382678e8168", size = 426820, upload-time = "2026-03-24T09:56:36.575Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/87/46c0406d8b5ddd026f73adaf5ab75ce144219c41a4830b52df4b9ab55f7f/sentry_sdk-2.57.0.tar.gz", hash = "sha256:4be8d1e71c32fb27f79c577a337ac8912137bba4bcbc64a4ec1da4d6d8dc5199", size = 435288, upload-time = "2026-03-31T09:39:29.264Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cd/1a/b3a3e9f6520493fed7997af4d2de7965d71549c62f994a8fd15f2ecd519e/sentry_sdk-2.56.0-py2.py3-none-any.whl", hash = "sha256:5afafb744ceb91d22f4cc650c6bd048ac6af5f7412dcc6c59305a2e36f4dbc02", size = 451568, upload-time = "2026-03-24T09:56:34.807Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/64/982e07b93219cb52e1cca5d272cb579e2f3eb001956c9e7a9a6d106c9473/sentry_sdk-2.57.0-py2.py3-none-any.whl", hash = "sha256:812c8bf5ff3d2f0e89c82f5ce80ab3a6423e102729c4706af7413fd1eb480585", size = 456489, upload-time = "2026-03-31T09:39:27.524Z" },
 ]
 
 [[package]]
