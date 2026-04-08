@@ -31,10 +31,15 @@ RUN apt-get update && \
 # copy all files not in .dockerignore
 COPY ./ /tmp/src
 RUN pip install uv
-RUN uv pip install --system hatchling hatch-vcs
+
 # build and install package
 WORKDIR /tmp/src
+# Install all dependencies
 RUN uv sync --frozen --no-editable
+# Install pacakge with version attached.
+RUN uv pip install --system hatchling hatch-vcs
+RUN uv build . --out-dir /tmp/
+RUN uv pip install --no-deps --find-links /tmp/ --system azul-plugin-assemblyline==$(hatchling version)
 
 # If on dev branch, install dev versions of azul packages (locate packages)
 # Note pip install --pre --upgrade --no-deps is not valid because it doesn't install the requirements of dev azul packages which are needed.
