@@ -36,15 +36,16 @@ RUN pip install uv
 WORKDIR /tmp/src
 # Install all dependencies
 RUN uv sync --frozen --no-editable
-# Install pacakge with version attached.
+# Install package with version attached. (hatchling and hatch-vcs installed after sync to avoid being uninstalled)
 RUN uv pip install --system hatchling hatch-vcs
 RUN uv build . --out-dir /tmp/
-RUN uv pip install --no-deps --find-links /tmp/ --system azul-plugin-assemblyline==$(hatchling version)
+RUN uv pip uninstall --system azul-plugin-assemblyline
+RUN uv pip install --system --no-deps --find-links /tmp/ azul-plugin-assemblyline==$(hatchling version)
 
 # If on dev branch, install dev versions of azul packages (locate packages)
 # Note pip install --pre --upgrade --no-deps is not valid because it doesn't install the requirements of dev azul packages which are needed.
 RUN if [ "$GIT_BRANCH_NAME" = "refs/heads/dev" ] ; then \
-    pip freeze | grep 'azul-.*==' | grep -v '^azul-plugin-assemblyline' | cut -d "=" -f 1 | xargs -I {} uv pip install --extra-index-url=$(UV_INDEX_URL) --system --upgrade --no-deps '{}>=0.0.0-dev' ;fi
+    uv pip freeze | grep 'azul-.*==' | grep -v '^azul-plugin-assemblyline' | cut -d "=" -f 1 | xargs -I {} uv pip install --extra-index-url=$(UV_INDEX_URL) --system --upgrade --no-deps '{}>=0.0.0-dev' ;fi
 
 FROM $REGISTRY/$BASE_IMAGE:$BASE_TAG AS base
 ENV DEBIAN_FRONTEND=noninteractive
