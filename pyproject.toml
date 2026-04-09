@@ -25,7 +25,8 @@ classifiers=[
 ]
 dependencies = [
     "assemblyline-client>=4.9.9",
-    "azul-runner>=9.0.38",
+    "azul-bedrock>=11.0.26",
+    "azul-runner>=11.0.33",
     "azul-security>=10.0.12",
     "fastapi>=0.128.0",
     "packaging>=26.0",
@@ -46,9 +47,28 @@ azul-plugin-assemblyline-forwarder = "azul_plugin_assemblyline.forwarder:main"
 Documentation = "https://australiancybersecuritycentre.github.io/azul/"
 Repository = "https://github.com/AustralianCyberSecurityCentre/azul-plugin-assemblyline"
 
+[tool.uv]
+package = true
+exclude-newer = "1 week"
+exclude-newer-package = { azul-bedrock = false, azul-runner = false, azul-security=false, azul-metastore = false, azul-nsrl-lookup-serve=false, azul-nsrl-lookup-server=false, azul-plugin-retrohunt = false }
+
+[tool.uv.sources]
+azul-bedrock = { index="cache"}
+azul-runner = { index="cache" }
+azul-metastore = { index="cache"}
+azul-security = { index="cache"}
+azul-nsrl-lookup-server = { index="cache"}
+azul-plugin-retrohunt = { index="cache" }
+
 [[tool.uv.index]]
-url = "https://devpi.acsc.internal/azul/stable/+simple"
+name = "pypi"
+url = "https://pypi.org/simple"
 default = true
+
+[[tool.uv.index]]
+name = "cache"
+url = "https://devpi.acsc.internal/azul/stable/"
+explicit = true
 
 [tool.hatch.version]
 source = "vcs"
@@ -66,8 +86,10 @@ dev = [
     "httpx>=0.28.1",
     "parameterized>=0.9.0",
     "pytest>=9.0.2",
+    "ruff>=0.15.8",
     "starlette>=0.50.0",
     "tox>=4.34.1",
+    "ty>=0.0.27",
 ]
 
 [tool.ruff]
