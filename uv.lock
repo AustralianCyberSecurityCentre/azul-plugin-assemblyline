@@ -8,7 +8,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-04-11T14:33:18.790497991Z"
+exclude-newer = "2026-04-11T15:33:20.030527267Z"
 exclude-newer-span = "P1W"
 
 [options.exclude-newer-package]
@@ -68,7 +68,7 @@ wheels = [
 
 [[package]]
 name = "azul-bedrock"
-version = "11.0.45"
+version = "11.0.47"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "babel" },
@@ -86,7 +86,7 @@ dependencies = [
     { name = "yara-python" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/fa0/92eceeb0d624e/azul_bedrock-11.0.45-py3-none-any.whl", hash = "sha256:fa092eceeb0d624e1a21623f2b7d6894222e3f1faf2e56cff27367ab3a38d152" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/eea/d7022447116e4/azul_bedrock-11.0.47-py3-none-any.whl", hash = "sha256:eead7022447116e470c19c19cbfb23d1b55ed6ecbd02af5f0c4c2880487c48f3" },
 ]
 
 [package.optional-dependencies]
@@ -193,7 +193,7 @@ test-utils = [
 
 [[package]]
 name = "azul-security"
-version = "11.0.16"
+version = "11.0.18"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "azul-bedrock" },
@@ -202,7 +202,7 @@ dependencies = [
     { name = "pydantic-settings" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/7c5/5fc54355d01bd/azul_security-11.0.16-py3-none-any.whl", hash = "sha256:7c55fc54355d01bd27de5c0c164808a8066dee6b7537ad5bfdf3fab9f485e9b0" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/c04/ad2b213d172fe/azul_security-11.0.18-py3-none-any.whl", hash = "sha256:c04ad2b213d172fee600d930a57aec36bec76a0215ba86ea69af1267017cad8d" },
 ]
 
 [[package]]
