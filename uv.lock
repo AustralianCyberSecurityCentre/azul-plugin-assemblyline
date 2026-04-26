@@ -8,7 +8,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-04-19T18:06:50.195374203Z"
+exclude-newer = "2026-04-19T19:06:41.248912173Z"
 exclude-newer-span = "P1W"
 
 [options.exclude-newer-package]
@@ -193,7 +193,7 @@ test-utils = [
 
 [[package]]
 name = "azul-security"
-version = "11.0.65"
+version = "11.0.67"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "azul-bedrock" },
@@ -202,7 +202,7 @@ dependencies = [
     { name = "pydantic-settings" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/aee/dd99fe2aed3a8/azul_security-11.0.65-py3-none-any.whl", hash = "sha256:aeedd99fe2aed3a8b42a004968ad6285c97248fbfb6d5801a1d96abd635616be" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/ae0/5a900b1fa52b9/azul_security-11.0.67-py3-none-any.whl", hash = "sha256:ae05a900b1fa52b974cb80b5f3e9aa5f6dc7819b6fd3bdf21ce9915f39ca3788" },
 ]
 
 [[package]]
