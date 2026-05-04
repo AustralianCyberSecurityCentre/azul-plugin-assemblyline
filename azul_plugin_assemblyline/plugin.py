@@ -173,7 +173,7 @@ class AzulPluginAssemblyline(BinaryPlugin):
 
     def __init__(self, config: azr_settings.Settings | dict | None = None):
         super().__init__(config)
-        self.al_settings = AlClientSettings()
+        self.al_settings = AlClientSettings()  # ty: ignore[missing-argument]
         self.al_client_ref = common.setup_al_client(self.al_settings, self.logger)
 
     def process_yara_hits(self, al_result: models.Full.Result) -> list[FeatureValue]:
@@ -246,6 +246,12 @@ class AzulPluginAssemblyline(BinaryPlugin):
         if self.meta.version != 1:
             raise ServerVersionException("Version of azul-assemblyline server data is not compatible with plugin.")
 
+        if not self.meta.action:
+            return State(
+                State.Label.ERROR_EXCEPTION,
+                message="The event is missing the action field.",
+            )
+
         # FUTURE - give scope to do things differently when submitted to assemblyline from Azul.
         self.submitted_by_azul = False
         azul_instance = self.meta.action.submission.metadata.get(self.al_settings.azul_instance_key)
@@ -279,6 +285,12 @@ class AzulPluginAssemblyline(BinaryPlugin):
             self.ontology_map.setdefault(o.file.sha256, []).append(o)
 
         # map services that extracted files to the files sh256 for later lookup
+        if not self.meta.full:
+            return State(
+                State.Label.ERROR_EXCEPTION,
+                message="The event is missing the full field.",
+            )
+
         for v in self.meta.full.results.values():
             for ex in v.response.extracted:
                 # only care about last service that extracted the file
@@ -299,6 +311,9 @@ class AzulPluginAssemblyline(BinaryPlugin):
 
         This method should **only** be called by `execute`.
         """
+        if not self.meta.full:
+            raise ValueError("full field is required in meta to recursively walk the tree")
+
         file_info = self.meta.full.file_infos[_tree.sha256]
 
         if _parent:
