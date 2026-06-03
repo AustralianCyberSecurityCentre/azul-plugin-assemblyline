@@ -3,9 +3,8 @@ import os
 import unittest
 from os import path
 from unittest import mock
-
+from azul_bedrock.exceptions_security import SecurityParseException
 from assemblyline_client.common.classification import Classification as AlClassification
-from azul_security import security
 from parameterized import parameterized
 
 from azul_plugin_assemblyline import settings
@@ -91,7 +90,7 @@ class ClassificationMappingTests(unittest.TestCase):
             self.assertEqual(final_string, expected)
             self.assertTrue(self.cur_setting.is_valid_security(test_input))
         else:
-            self.assertRaises(security.SecurityParseException, self.cur_setting.combine_security, [test_input])
+            self.assertRaises(SecurityParseException, self.cur_setting.combine_security, [test_input])
 
     @parameterized.expand(
         [

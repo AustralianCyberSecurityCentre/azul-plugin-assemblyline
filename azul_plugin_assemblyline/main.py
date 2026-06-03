@@ -8,10 +8,10 @@ import re
 import assemblyline_client as al
 import structlog
 from azul_bedrock import models_network as azm
+from azul_bedrock.exceptions_security import SecurityParseException
 from azul_runner import main as azr_main
 from azul_runner import storage
 from azul_runner.pusher import Pusher
-from azul_security import security
 from fastapi import BackgroundTasks, FastAPI, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
@@ -208,7 +208,7 @@ def process_submission(api_action: models.ActionApi, al_client: al.Client4):
     max_clsf = ""
     try:
         max_clsf = settings.combine_security(clsfs)
-    except security.SecurityParseException as ex:
+    except SecurityParseException as ex:
         arg = ""
         if len(ex.args) > 0:
             arg = ex.args[0]
