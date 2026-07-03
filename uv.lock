@@ -12,14 +12,13 @@ exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for 
 exclude-newer-span = "P1W"
 
 [options.exclude-newer-package]
-azul-plugin-retrohunt = false
-azul-security = false
-azul-nsrl-lookup-serve = false
-azul-runner = false
-assemblyline-client = false
-azul-metastore = false
-azul-bedrock = false
 azul-nsrl-lookup-server = false
+azul-bedrock = false
+azul-security = false
+azul-runner = false
+azul-metastore = false
+azul-plugin-retrohunt = false
+azul-nsrl-lookup-serve = false
 
 [[package]]
 name = "annotated-doc"
@@ -54,7 +53,7 @@ wheels = [
 
 [[package]]
 name = "assemblyline-client"
-version = "4.9.12"
+version = "4.9.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pycryptodome" },
@@ -64,7 +63,7 @@ dependencies = [
     { name = "socketio-client" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/58/16/8e4cceeec9580ab27412f99eeafbe122d71dfab56dc1d52c47f279794309/assemblyline_client-4.9.12-py2.py3-none-any.whl", hash = "sha256:30811434a3d0c0d40dcbc8345d62f83234654d76097f158f3e6d40261423b458", size = 67279, upload-time = "2026-07-02T15:00:11.311Z" },
+    { url = "https://files.pythonhosted.org/packages/7a/54/303e7cb462d96d6c1e1e31f4df3522a9c8ed20fed89d88f88a50504dda9c/assemblyline_client-4.9.9-py2.py3-none-any.whl", hash = "sha256:b6ff7d02e7c1b837c67a24aa4028139fa9fb2b6e6b3189f496e5c99c788ef474", size = 66887, upload-time = "2025-12-20T12:03:51.626Z" },
 ]
 
 [[package]]
