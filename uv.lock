@@ -133,7 +133,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "assemblyline-client", specifier = ">=4.9.9" },
+    { name = "assemblyline-client", specifier = ">=4.9.12" },
     { name = "azul-bedrock", specifier = ">=11.0.26", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "azul-runner", specifier = ">=11.0.33", index = "https://devpi.acsc.internal/azul/stable/" },
     { name = "azul-security", specifier = ">=10.0.12", index = "https://devpi.acsc.internal/azul/stable/" },
@@ -193,7 +193,7 @@ test-utils = [
 
 [[package]]
 name = "azul-security"
-version = "12.0.7"
+version = "12.0.9"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "azul-bedrock" },
@@ -204,7 +204,7 @@ dependencies = [
     { name = "pydantic-settings" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/473/1a2661eefdd1c/azul_security-12.0.7-py3-none-any.whl", hash = "sha256:4731a2661eefdd1c476fb2f6aa21286d909f4374d4f54d0c2a048385184fdcea" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/c2f/2a34a4cc26281/azul_security-12.0.9-py3-none-any.whl", hash = "sha256:c2f2a34a4cc262812e0d5c4b641d26276960eb5df2b3fb4c65f58664bdd2afee" },
 ]
 
 [[package]]

@@ -24,7 +24,7 @@ classifiers=[
     "Topic :: Software Development :: Libraries",
 ]
 dependencies = [
-    "assemblyline-client>=4.9.9",
+    "assemblyline-client>=4.9.12",
     "azul-bedrock>=11.0.26",
     "azul-runner>=11.0.33",
     "azul-security>=10.0.12",

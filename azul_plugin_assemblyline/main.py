@@ -174,7 +174,7 @@ def process_submission(api_action: models.ActionApi, al_client: al.Client4):
         ontologies.append(ontology)
 
     # all results of submission except for ontologies
-    full = models.Full(**al_client.submission.full(action.submission.sid))
+    full = models.Full(**al_client.submission.full(action.submission.sid, get_full_tree=True))
     clsf = full.classification
     if not settings.is_valid_security(clsf):
         logger.warning(
