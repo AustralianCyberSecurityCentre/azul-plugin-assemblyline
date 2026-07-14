@@ -82,11 +82,11 @@ class Settings(BaseSettings):
     plugin_headers: dict[str, str] = dict()
 
     # Url to the assemblyline instance
-    al_url: str
+    al_url: str = ""
     # Username for user authenticating to Assemblyline.
-    al_user: str
+    al_user: str = ""
     # API Token for Assemblyline user.
-    al_token: str
+    al_token: str = ""
     # Submission profile for AL submissions
     al_submission_profile: str = "static"
     # Enable/Disable SSL Verify
@@ -164,7 +164,7 @@ class Settings(BaseSettings):
             return False
         return True
 
-    def _convert_al_clsf_to_al_tokens(self, al_clsf: str) -> set[str] | None:
+    def _convert_al_clsf_to_al_tokens(self, al_clsf: str) -> set[str]:
         """Converts Assemblyline security string to individual tokens."""
         tokens = set(re.split(r",|\/", al_clsf.replace("REL TO", "").replace("REL", "")))
         final_tokens = set()

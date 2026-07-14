@@ -32,7 +32,7 @@ class AzulPluginAssemblylineForwarder(BinaryPlugin):
 
     def __init__(self, config: azr_settings.Settings | dict | None = None):
         super().__init__(config)
-        self.al_settings = AlClientSettings()  # ty: ignore[missing-argument]
+        self.al_settings = AlClientSettings()
         self.al_client_ref = common.setup_al_client(self.al_settings, self.logger)
 
     def execute(self, job: Job):
@@ -99,6 +99,9 @@ class AzulPluginAssemblylineForwarder(BinaryPlugin):
 
         # Get the binary file and submit it to Assemblyline.
         content = job.get_data()
+        if content is None:
+            return State(State.Label.OPT_OUT, message="Job contained no data to parse.")
+
         filename = "unknown"
         with contextlib.suppress(Exception):
             if job.event.source.path[0].filename:
