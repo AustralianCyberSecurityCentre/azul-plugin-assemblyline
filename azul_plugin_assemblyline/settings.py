@@ -7,6 +7,7 @@ from functools import cache, cached_property
 
 import assemblyline_client as al
 from assemblyline_client.common.classification import Classification as AlClassification
+from azul_bedrock.exceptions_security import SecurityParseException
 from azul_security import security
 from pydantic import PrivateAttr, computed_field
 from pydantic_settings import BaseSettings
@@ -159,7 +160,7 @@ class Settings(BaseSettings):
                 final_tokens.add(t)
         try:
             self._security.string_normalise(" ".join(final_tokens))
-        except security.SecurityParseException:
+        except SecurityParseException:
             return False
         return True
 
