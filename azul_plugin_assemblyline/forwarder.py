@@ -99,9 +99,6 @@ class AzulPluginAssemblylineForwarder(BinaryPlugin):
 
         # Get the binary file and submit it to Assemblyline.
         content = job.get_data()
-        if content is None:
-            return State(State.Label.ERROR_EXCEPTION, message="Job contained no content.")
-
         filename = "unknown"
         with contextlib.suppress(Exception):
             if job.event.source.path[0].filename:

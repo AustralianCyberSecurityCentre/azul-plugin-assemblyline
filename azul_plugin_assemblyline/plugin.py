@@ -229,10 +229,7 @@ class AzulPluginAssemblyline(BinaryPlugin):
     def execute(self, job: Job):
         """Run the plugin."""
         try:
-            job_data = job.get_data(DataLabel.ASSEMBLYLINE)
-            if job_data is None:
-                raise storage.ProxyFileNotFoundError("No job data retrieved")
-            self.meta = models.Wrapper(**json.loads(job_data.read().decode("utf8")))
+            self.meta = models.Wrapper(**json.loads(job.get_data(DataLabel.ASSEMBLYLINE).read().decode("utf8")))
             # To collect new samples for tests uncomment out the below line.
             # self.logger.warning(self.meta.model_dump_json())
         except storage.ProxyFileNotFoundError as e:
