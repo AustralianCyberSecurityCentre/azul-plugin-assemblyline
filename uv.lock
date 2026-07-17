@@ -68,7 +68,7 @@ wheels = [
 
 [[package]]
 name = "azul-bedrock"
-version = "12.0.35"
+version = "12.0.38"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "babel" },
@@ -86,7 +86,7 @@ dependencies = [
     { name = "yara-x" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/e8d/c67583c625353/azul_bedrock-12.0.35-py3-none-any.whl", hash = "sha256:e8dc67583c6253539cf6eeecec2edc00b5a280750dab2811043908192b0948f4" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/659/d47bfaa4e94d1/azul_bedrock-12.0.38-py3-none-any.whl", hash = "sha256:659d47bfaa4e94d12792d7677420bf5d14788a6f9feae8d6182fe311d74e0ad6" },
 ]
 
 [package.optional-dependencies]
@@ -163,7 +163,7 @@ dev = [
 
 [[package]]
 name = "azul-runner"
-version = "12.0.42"
+version = "12.0.45"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "azul-bedrock" },
@@ -176,7 +176,7 @@ dependencies = [
     { name = "watchdog" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/2c4/a803f5431f97f/azul_runner-12.0.42-py3-none-any.whl", hash = "sha256:2c4a803f5431f97fd831546ea1acb7232a568aa54367d09723906f257eb77be9" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/2a2/98d3c1551d654/azul_runner-12.0.45-py3-none-any.whl", hash = "sha256:2a298d3c1551d654b5ed6cdd848039de9635e1b7db5118f51371743610b5c1a2" },
 ]
 
 [package.optional-dependencies]
@@ -193,7 +193,7 @@ test-utils = [
 
 [[package]]
 name = "azul-security"
-version = "12.0.9"
+version = "12.0.11"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "azul-bedrock" },
@@ -204,7 +204,7 @@ dependencies = [
     { name = "pydantic-settings" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/c2f/2a34a4cc26281/azul_security-12.0.9-py3-none-any.whl", hash = "sha256:c2f2a34a4cc262812e0d5c4b641d26276960eb5df2b3fb4c65f58664bdd2afee" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/ff3/0a7b38eb84abd/azul_security-12.0.11-py3-none-any.whl", hash = "sha256:ff30a7b38eb84abd1a5a7d141b8dd9f7fd5de9583db1529a6928ccfb394123b9" },
 ]
 
 [[package]]
