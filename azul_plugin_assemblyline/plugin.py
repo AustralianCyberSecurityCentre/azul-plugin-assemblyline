@@ -173,7 +173,7 @@ class AzulPluginAssemblyline(BinaryPlugin):
 
     def __init__(self, config: azr_settings.Settings | dict | None = None):
         super().__init__(config)
-        self.al_settings = AlClientSettings()
+        self.al_settings = AlClientSettings()  # ty: ignore[missing-argument] al_url, al_user, and al_token must be environment variables
         self.al_client_ref = common.setup_al_client(self.al_settings, self.logger)
 
     def process_yara_hits(self, al_result: models.Full.Result) -> list[FeatureValue]:

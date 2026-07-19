@@ -82,11 +82,11 @@ class Settings(BaseSettings):
     plugin_headers: dict[str, str] = dict()
 
     # Url to the assemblyline instance
-    al_url: str = ""
+    al_url: str
     # Username for user authenticating to Assemblyline.
-    al_user: str = ""
+    al_user: str
     # API Token for Assemblyline user.
-    al_token: str = ""
+    al_token: str
     # Submission profile for AL submissions
     al_submission_profile: str = "static"
     # Enable/Disable SSL Verify
