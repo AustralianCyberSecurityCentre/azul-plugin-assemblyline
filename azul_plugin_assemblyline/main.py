@@ -31,7 +31,7 @@ prom_classifications_dropped = Counter(
 )
 prom_classifications_dropped.labels("")
 
-settings = Settings()  # ty: ignore[missing-argument] al_url, al_user, and al_token must be environment variables
+settings = Settings()
 
 
 def create_pusher(register: bool = False) -> Pusher:
