@@ -148,6 +148,10 @@ class Settings(BaseSettings):
     def is_valid_security(self, clsf: str):
         """Return true if all groups from assembyline can be mapped to azul."""
         tokens = self._convert_al_clsf_to_al_tokens(clsf)
+
+        if not tokens:
+            raise ValueError(f"Invalid Assemblyline classification {clsf} provided, couldn't be parsed into tokens.")
+
         final_tokens = set()
         for t in tokens:
             if t in self.security_map.keys():
@@ -160,7 +164,7 @@ class Settings(BaseSettings):
             return False
         return True
 
-    def _convert_al_clsf_to_al_tokens(self, al_clsf: str) -> set[str] | None:
+    def _convert_al_clsf_to_al_tokens(self, al_clsf: str) -> set[str]:
         """Converts Assemblyline security string to individual tokens."""
         tokens = set(re.split(r",|\/", al_clsf.replace("REL TO", "").replace("REL", "")))
         final_tokens = set()
@@ -173,7 +177,7 @@ class Settings(BaseSettings):
 
         return final_tokens
 
-    def convert_azul_classification_to_al(self, al_client: al.Client4, azul_classification: str) -> str | None:
+    def convert_azul_classification_to_al(self, al_client: al.Client4, azul_classification: str | None) -> str | None:
         """Convert an azul classification to an assemblyline one.
 
         Ensure ALL of a security string is mapped to an Assemblyline equivalent with no leftovers.

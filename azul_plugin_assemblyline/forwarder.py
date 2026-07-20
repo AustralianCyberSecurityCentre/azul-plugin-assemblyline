@@ -7,8 +7,9 @@ import traceback
 
 import assemblyline_client as al
 from azul_runner import BinaryPlugin, Job, State, add_settings, cmdline_run
+from azul_runner import settings as azr_settings
 
-from azul_plugin_assemblyline import common, settings
+from azul_plugin_assemblyline import common
 from azul_plugin_assemblyline.models import AssemblylineAzulMetadata
 from azul_plugin_assemblyline.settings import Settings as AlClientSettings
 
@@ -29,7 +30,7 @@ class AzulPluginAssemblylineForwarder(BinaryPlugin):
     )
     FEATURES = []
 
-    def __init__(self, config: settings.Settings | dict = None):
+    def __init__(self, config: azr_settings.Settings | dict | None = None):
         super().__init__(config)
         self.al_settings = AlClientSettings()
         self.al_client_ref = common.setup_al_client(self.al_settings, self.logger)
