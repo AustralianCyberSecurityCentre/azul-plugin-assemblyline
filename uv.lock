@@ -202,7 +202,7 @@ test-utils = [
 
 [[package]]
 name = "azul-security"
-version = "13.0.24"
+version = "13.0.26"
 source = { registry = "https://devpi.acsc.internal/azul/stable/" }
 dependencies = [
     { name = "azul-bedrock" },
@@ -213,7 +213,7 @@ dependencies = [
     { name = "pydantic-settings" },
 ]
 wheels = [
-    { url = "https://devpi.acsc.internal/azul/stable/+f/439/7f3e21d44f5a4/azul_security-13.0.24-py3-none-any.whl", hash = "sha256:4397f3e21d44f5a4dfeb167fcde122db39fa460d75d648879e5f17f81619b1e0" },
+    { url = "https://devpi.acsc.internal/azul/stable/+f/6a5/150422088dee7/azul_security-13.0.26-py3-none-any.whl", hash = "sha256:6a5150422088dee7f363ce36020a418ee9fe2a2de1a34e4c745aab37a88adc6e" },
 ]
 
 [[package]]
